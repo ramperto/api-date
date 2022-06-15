@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ .Values.container.name }}-ingress
+  # namespace: dev
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: "192.168.0.105.xip.io"
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: {{ .Values.container.name }}
+                port:
+                  number: 80

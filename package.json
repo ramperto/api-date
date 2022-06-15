@@ -1,5 +1,5 @@
 {
-  "name": "dateapi",
+  "name": "api-date",
   "version": "1.0.0",
   "description": "created by ramperto",
   "main": "index.js",
@@ -9,17 +9,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ramperto/dateapi.git"
+    "url": "git+https://github.com/ramperto/api-date.git"
   },
   "keywords": [
-    "dateapi"
+    "api-date"
   ],
   "author": "ramperto",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ramperto/dateapi/issues"
+    "url": "https://github.com/ramperto/api-date/issues"
   },
-  "homepage": "https://github.com/ramperto/dateapi#readme",
+  "homepage": "https://github.com/ramperto/api-date#readme",
   "dependencies": {
     "express": "^4.17.1",
     "request": "^2.88.2"
