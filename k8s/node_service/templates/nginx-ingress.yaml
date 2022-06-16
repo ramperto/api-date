@@ -4,9 +4,9 @@ metadata:
   name: {{ .Values.container.name }}-ingress
   namespace: {{ .Values.environment }}
 spec:
-  ingressClassName: nginx
+  ingressClassName: {{ .Values.container.name }}-{{ .Values.environment }}
   rules:
-    - host: "192.168.0.105.xip.io"
+    - host: "192.168.0.105-node.xip.io"
       http:
         paths:
           - pathType: Prefix

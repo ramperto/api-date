@@ -1,3 +1,4 @@
+apiVersion: v1
 name: api-date
 sources:
 - https://github.com/ramperto/api-date.git
