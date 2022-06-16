@@ -125,5 +125,5 @@ func main() {
 	mux.Handle("/users", userH)
 	mux.Handle("/users/", userH)
 
-	http.ListenAndServe("localhost:8080", mux)
+	http.ListenAndServe("0.0.0.0:8080", mux)
 }

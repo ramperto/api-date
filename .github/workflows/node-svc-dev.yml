@@ -1,8 +1,8 @@
 name: DEVELOPMENT Deployment
 on: 
   push:
-    branches:
-      - development
+    tags:
+      - node-svc-dev.1.*.*
 
 jobs:
   test_service:
@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: run docker compose test
-        run: docker-compose -f docker-compose-test.yml -p ci up --abort-on-container-exit --exit-code-from sut
+        run: docker-compose -f dockerfiles/docker-compose-test-node.yml -p ci up --abort-on-container-exit --exit-code-from sut
 
   push_to_registry:
     needs: test_service
@@ -38,7 +38,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
         with:
-          context: .
+          context: ./Dockerfile.test_node
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}

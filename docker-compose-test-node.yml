@@ -5,4 +5,4 @@ sut:
     - api
 api:
   build: .
-  dockerfile: Dockerfile
+  dockerfile: Dockerfile.node_service

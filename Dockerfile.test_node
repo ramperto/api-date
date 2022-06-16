@@ -1,0 +1,9 @@
+FROM ubuntu:trusty
+
+RUN apt-get install -yq curl && apt-get clean
+
+WORKDIR /app
+
+ADD test_node.sh /app/test_node.sh
+
+CMD ["bash", "test_node.sh"]
