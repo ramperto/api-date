@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ .Values.container.name }}-ingress
-  # namespace: dev
+  namespace: {{ .Values.environment }}
 spec:
   ingressClassName: nginx
   rules:
@@ -13,6 +13,6 @@ spec:
             path: "/"
             backend:
               service:
-                name: {{ .Values.container.name }}
+                name: {{ .Values.container.name }}-service-{{ .Values.environment }}
                 port:
                   number: 80
