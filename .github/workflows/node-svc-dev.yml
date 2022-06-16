@@ -12,8 +12,11 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v3
 
+      - name: update docker files
+        run: cp dockerfiles/node_service/* .
+
       - name: run docker compose test
-        run: docker-compose -f dockerfiles/node_service/docker-compose-test-node.yml -p ci up --abort-on-container-exit --exit-code-from sut
+        run: docker-compose -f docker-compose-test-node.yml -p ci up --abort-on-container-exit --exit-code-from sut
 
   push_to_registry:
     needs: test_service
