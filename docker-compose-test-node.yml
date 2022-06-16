@@ -1,6 +1,6 @@
 sut:
   build: .
-  dockerfile: Dockerfile.test
+  dockerfile: Dockerfile.test_node
   links:
     - api
 api:
