@@ -1,0 +1,8 @@
+sut:
+  build: .
+  dockerfile: Dockerfile.test_node
+  links:
+    - api
+api:
+  build: .
+  dockerfile: Dockerfile.node_service

@@ -1,0 +1,8 @@
+sut:
+  build: .
+  dockerfile: Dockerfile.test_go
+  links:
+    - api
+api:
+  build: .
+  dockerfile: Dockerfile.go_service

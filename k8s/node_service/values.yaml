@@ -1,7 +1,7 @@
 environment: staging
 container:
-  name: api-date
+  name: node-service
   port: 3000
-  image: greenlemon/api-date
+  image: greenlemon/node-service
   tag: latest
 replicas: 1

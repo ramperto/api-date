@@ -1,0 +1,7 @@
+environment: staging
+container:
+  name: go-service
+  port: 8080
+  image: greenlemon/go-service
+  tag: latest
+replicas: 1
