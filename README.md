@@ -219,7 +219,8 @@ To push to Docker Hub, you will need to have a Docker Hub account, and have a Do
 
 The `login-action` options required for Docker Hub are:
 
-* `username` and `password`: This is your Docker Hub username and password. We recommend storing your Docker Hub username and password as secrets so they aren't exposed in your workflow file.
+* `username` and `password`: This is your Docker Hub username and password. 
+
 The metadata-action option required for Docker Hub is:
 
 * `images:` The namespace and name for the Docker image you are building/pushing to Docker Hub.
