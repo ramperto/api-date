@@ -1,2 +1,2 @@
-environment: staging-node
+environment: staging
 replicas: 2

@@ -7,9 +7,12 @@ metadata:
     app: {{ .Values.container.name }}
 spec:
   ports:
-  - port: 80
+  - port: {{ .Values.container.port }}
     protocol: TCP
     targetPort: {{ .Values.container.port }}
   selector:
     app: {{ .Values.container.name }}
   type: LoadBalancer
+
+
+# helm upgrade --install ingress-nginx ingress-nginx --repo https://kubernetes.github.io/ingress-nginx --namespace ingress-nginx --create-namespace

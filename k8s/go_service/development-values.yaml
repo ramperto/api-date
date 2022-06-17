@@ -1,2 +1,2 @@
-environment: development-go
+environment: development
 replicas: 1

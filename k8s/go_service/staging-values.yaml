@@ -1,2 +1,2 @@
-environment: staging-go
+environment: staging
 replicas: 2

@@ -1,2 +1,2 @@
-environment: development-node
+environment: development
 replicas: 1

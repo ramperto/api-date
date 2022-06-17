@@ -1,4 +1,4 @@
-environment: staging-go
+environment: staging
 container:
   name: go-service
   port: 8080

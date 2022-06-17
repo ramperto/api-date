@@ -1,4 +1,4 @@
-environment: staging-node
+environment: staging
 container:
   name: node-service
   port: 3000
