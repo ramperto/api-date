@@ -4,4 +4,11 @@ container:
   port: 8080
   image: greenlemon/go-service
   tag: latest
+  resources:
+    requests:  
+      memory: "10Mi"
+      cpu: "100m"
+    limits:
+      memory: "20Mi"
+      cpu: "250m"
 replicas: 1
