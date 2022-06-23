@@ -1,2 +1,2 @@
-environment: development
+environment: default
 replicas: 1
